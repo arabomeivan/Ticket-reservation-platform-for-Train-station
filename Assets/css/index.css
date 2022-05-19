@@ -152,5 +152,14 @@ h4, p, h6
 /*For mobile phones*/
 @media screen and (max-width: 567px) 
 {
+    h4, p, h6
+    {
+        font-size: small
+    }
     
+    .img-fluid
+{
+    width: 40%;
+}
+
 }
