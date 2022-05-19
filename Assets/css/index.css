@@ -13,7 +13,7 @@ body
 .title, .title:hover
 {
     margin-left: 3%;
-    color: #40415c;
+    color: white;
     font-size: large;
     text-decoration: none;
 }
@@ -25,7 +25,11 @@ body
 }
 
 /*Changing button font color on the nav bar*/
-.nav-link, .nav-link:hover
+.nav-link
+{
+    color: white;
+}
+.nav-link:hover
 {
     color: #40415c;
 }
