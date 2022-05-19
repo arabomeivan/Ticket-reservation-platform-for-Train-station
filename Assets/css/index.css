@@ -138,6 +138,14 @@ h4, p, h6
     background-color: #04b9a1;
     border-color: #04b9a1;
 }
+.btn-primary:focus
+{
+    box-shadow: none;
+}
+.navbar-toggler-icon
+{
+    border-color: aliceblue;
+}
 /*Removing horizontal line beneath tabs*/
 .nav-tabs
 {
@@ -152,14 +160,45 @@ h4, p, h6
 /*For mobile phones*/
 @media screen and (max-width: 567px) 
 {
+    /*customizing navbar-toggler for mobile version*/
+    .navbar-toggler 
+    {
+        border: none;
+    }
+    .navbar-toggler:focus
+    {
+        box-shadow: none;
+    }
+
+    /*adjusting text for mobile screen*/
     h4, p, h6
     {
-        font-size: small
+        font-size: medium;
+        margin-right: 10%;
     }
+
+    /*adjusting image*/
     
     .img-fluid
 {
-    width: 40%;
+    margin-left: 6%;
+    width: 80%;
 }
 
+/*giving spaces between input boxes*/
+
+.text-center
+{
+    height: auto;
+}
+
+.col-sm-2
+{
+    margin-top: 6%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*reducing width of*/
 }
