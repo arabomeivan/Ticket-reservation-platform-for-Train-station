@@ -25,7 +25,7 @@ body
 }
 
 /*Changing button font color on the nav bar*/
-.nav-link
+.nav-link, .nav-link:hover
 {
     color: #40415c;
 }
@@ -37,7 +37,10 @@ body
     height: 20%;
 }
 /*changing button color for nav menu*/
-
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: white;
+    background-color: #40415c;
+}
 
 /*styling image in first section of page*/
 .img-fluid
