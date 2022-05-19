@@ -1,0 +1,146 @@
+
+body
+{
+    width: 100%;
+}
+.container
+{
+      width: 100%;
+      height: auto;
+}
+
+/*for the main title of the application found on the navbar*/
+.title, .title:hover
+{
+    margin-left: 3%;
+    color: #40415c;
+    font-size: large;
+    text-decoration: none;
+}
+
+/*floating nav items to the left side of the navbar*/
+.nav-pills
+{
+    margin-left: 70%;
+}
+
+/*Changing button font color on the nav bar*/
+.nav-link
+{
+    color: #40415c;
+}
+
+/*changing color of nav bar*/
+.header
+{
+    background-color:   #04b9a1;
+    height: 20%;
+}
+/*changing button color for nav menu*/
+
+
+/*styling image in first section of page*/
+.img-fluid
+{
+    margin-top: 5%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+/*edit the text*/
+.contentwriteup
+{
+    margin-top: 10%;
+    color: #40415c;
+    text-align: justify;
+}
+h4, p, h6
+{
+    margin-left: 10%;
+}
+
+/**editing the anchor tag hover and color*/
+.bookticket, .bookticket:hover
+{
+   color: #40415c;
+}
+
+/*moving section for ticket downwards a bit*/
+.ticketform
+{
+    margin-top: 7%;
+}
+
+/*styling card for ticket form*/
+.text-center
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 200px;
+}
+/*give input box style*/
+.form-control
+{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;   
+    border-radius: 0%;
+    border-color: #40415c;
+}
+.form-control:focus
+{
+    border-color: #40415c;
+    box-shadow: none;
+    outline: none;
+}
+/*for the icons box*/
+.input-group-text
+{
+    background-color: white;
+    border-left-style: hidden;
+    border-right-style:hidden ;
+    border-top-style: hidden;
+    border-bottom-style: groove;
+    border-radius: 0%;
+    border-color: #40415c;
+}
+
+
+/*for text field size*/
+.input-group
+{
+    margin-bottom: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*moving form downwards a bit from tab*/
+.oneway
+{
+    margin-top: 2.3%;
+
+}
+/*styling background color for button*/
+.btn-primary, .btn-primary:hover, .btn-primary:focus
+{
+    background-color: #04b9a1;
+    border-color: #04b9a1;
+}
+/*Removing horizontal line beneath tabs*/
+.nav-tabs
+{
+    border-bottom-style: none;
+}
+
+/*Responsiveness*/
+
+/*For mobile phones*/
+@media screen and (max-width: 567px) 
+{
+    
+}

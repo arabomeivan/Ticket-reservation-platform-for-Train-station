@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan's Train Station Ticket Reservation System</title>
+
+    <!-- Vanilla Datepicker CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>
+    
+    <!--For Viewport-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="Assets/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="Assets/css/bootsrap.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="Assets/css/index.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="Assets/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  
+
+    <!--For navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light header">
+
+        <!--This will be displayed on large screen-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="title" href="#"><h5>Ivan's Train Ticket Reservation System</h5></a>
+
+          <!--This will be displayed on small screen when minimized-->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Book Ticket</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">View Ticket Record</button>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+    <!--For Content-->
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="Assets/images/undraw_subway_-7-vh7 (1).svg" class="img-fluid" alt="...">
+      </div>
+      <div class="col-sm-6 contentwriteup">
+       
+        <h4>Book Your Train Tickets Today With
+          ITTRS  </h4>
+          <p>To inform, inspire and empower travellers via cutting edge technology
+            <br>and world class standards</p>
+            <a class="bookticket" href=""><h6>Book Your Ticket Today</h6></a>
+      </div>
+    </div>
+
+    <!--Section to book ticket-->
+    <div class="row ticketform">
+
+      <!--card for holding form-->
+      <div class="card text-center">
+        <div class="card-body">
+
+          <!--Tab to Display different forms-->
+          <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">One Way Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Return Booking</a>
+            </li>
+          </ul>
+          <!--to display form horizontally use a grid system-->
+          <form class="row oneway">
+            <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
+              <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon2">
+            </div>
+            </div>
+
+            <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
+              <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon2">
+            </div>
+            </div>
+
+            <div class="col-sm-2"> 
+              <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope icon"></i></span>
+              <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+            </div>
+            </div>
+           
+            <div class="col-sm-2">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone icon"></i></span>
+                <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon2">
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-chair"></i></span>
+                <input type="number" class="form-control" placeholder="Passengers" aria-label="Number of Passengers" aria-describedby="basic-addon2">
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
+                <input type="text" id="expirydate" class="datepicker_input form-control" placeholder="Departure Date" required aria-label="Departure Date">
+              </div>
+            </div>
+
+          </form>
+           
+        </div>
+        <div class="row">
+          <a href="#" class="btn btn-primary">Book Ticket</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--For Footer-->
+    <div class="row footer"></div>
+   
+    <script src="jsfile.js"></script>
+</body>
+
+</html>
