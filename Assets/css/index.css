@@ -25,11 +25,11 @@ body
 }
 
 /*Changing button font color on the nav bar*/
-.nav-link
+.menu
 {
     color: white;
 }
-.nav-link:hover
+.menu:hover
 {
     color: #40415c;
 }
@@ -41,10 +41,23 @@ body
     height: 20%;
 }
 /*changing button color for nav menu*/
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.mainmenu .menu.active, .mainmenu .show > .menu {
     color: white;
     background-color: #40415c;
 }
+
+/*changing tab button color in form*/
+.bookingoptions .tabbuttons.active, .bookingoptions .show > .tabbuttons 
+{
+    color: white;
+    background-color: #40415c;
+}
+
+.bookingoptions
+{
+    color: #40415c;
+}
+
 
 /*styling image in first section of page*/
 .img-fluid
@@ -85,7 +98,7 @@ h4, p, h6
 {
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 85%;
     height: 200px;
 }
 /*give input box style*/
@@ -124,6 +137,7 @@ h4, p, h6
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    
 
 }
 /*moving form downwards a bit from tab*/
@@ -155,6 +169,7 @@ h4, p, h6
 {
     color: #40415c;
 }
+
 /*Responsiveness*/
 
 /*For mobile phones*/
@@ -177,6 +192,12 @@ h4, p, h6
         margin-right: 10%;
     }
 
+    /*adjusting font size for navigation menu*/
+    .menu
+{
+    font-size: small;
+}
+
     /*adjusting image*/
     
     .img-fluid
@@ -189,6 +210,8 @@ h4, p, h6
 
 .text-center
 {
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
 }
 
@@ -199,6 +222,30 @@ h4, p, h6
     margin-left: auto;
     margin-right: auto;
 }
+h6
+{
+    text-align: center;
+}
+h5
+{
+    display: none;
+}
+.mainmenu
+{
+    margin-left: 16%;
+    
+}
 
-/*reducing width of*/
+/*reducing width of tab buttons for form*/
+.tabbuttons
+{
+    font-size: small;
+}
+
+.bookingoptions
+{
+    margin-left: 5%;
+    flex-wrap:nowrap;
+}
+
 }
