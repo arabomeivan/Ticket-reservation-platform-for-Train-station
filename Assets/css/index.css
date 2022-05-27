@@ -98,12 +98,13 @@ h4, p, h6
 {
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
-    height: 200px;
+    width: 75%;
+    height: auto;
 }
 /*give input box style*/
 .form-control
 {
+    width: 70%;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
@@ -111,35 +112,31 @@ h4, p, h6
     border-radius: 0%;
     border-color: #40415c;
 }
-.form-control:focus
+.form-control:focus, .form-select:focus
 {
     border-color: #40415c;
     box-shadow: none;
     outline: none;
 }
-/*for the icons box*/
-.input-group-text
+
+
+/*for form-select width*/
+.form-floating
 {
-    background-color: white;
-    border-left-style: hidden;
-    border-right-style:hidden ;
+    margin-left: 20%;
+}
+.form-select
+{
+    width: 72.5%;
     border-top-style: hidden;
-    border-bottom-style: groove;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;   
     border-radius: 0%;
     border-color: #40415c;
+    margin-top: 5%;
 }
 
-
-/*for text field size*/
-.input-group
-{
-    margin-bottom: none;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    
-
-}
 /*moving form downwards a bit from tab*/
 .oneway
 {
@@ -168,6 +165,12 @@ h4, p, h6
 .bookingtabs, .bookingtabs:focus
 {
     color: #40415c;
+}
+
+.bookingoptions
+{
+    margin-left: 38%;
+    
 }
 
 /*Responsiveness*/

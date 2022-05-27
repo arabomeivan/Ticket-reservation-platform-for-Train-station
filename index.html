@@ -35,7 +35,7 @@
   
 
     <!--For navbar-->
-      <nav class="navbar navbar-expand-lg navbar-light header">
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top header">
 
         <!--This will be displayed on large screen-->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,98 +95,195 @@
             <!--Form For one Way Booking-->
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               
-              <form class="row oneway" id="">
-                <div class="col-sm-2">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
-                  <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon2">
+              <form>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+                  <label for="floatingInput">First Name</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
+                  <label for="floatingInput">Last Name</label>
                 </div>
-    
-                <div class="col-sm-2">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
-                  <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon2">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number">
+                  <label for="floatingInput">Phone Number</label>
                 </div>
-    
-                <div class="col-sm-2"> 
-                  <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope icon"></i></span>
-                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="Number of Passengers">
+                  <label for="floatingInput">Number of Passengers</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="date" class="form-control" id="floatingInput" placeholder="Departure date">
+                  <label for="floatingInput">Date of Departure</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-select" aria-label="Default select example" id="identification">
+                      <option value="Lagos Subway">International Passport</option>
+                      <option value="Abuja Subway">Driver's License</option>
+                      <option value="Kano Railway">NIN</option>
+                    </select>
+                    <label for="stateofdeparture">Means of Identification</label>
+                    </div>
                
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone icon"></i></span>
-                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon2">
-                  </div>
-                </div>
-    
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-chair"></i></span>
-                    <input type="number" class="form-control" placeholder="Passengers" aria-label="Number of Passengers" aria-describedby="basic-addon2">
-                  </div>
-                </div>
-    
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                    <input type="date" class="form-control" placeholder="Departure Date" aria-label="Departure Date" aria-describedby="basic-addon2">
-                  </div>
-                </div>
+                <div class="form-floating mb-3">
+                  <select class="form-select" aria-label="Default select example" id="subwaystation">
+                      <option value="Lagos Subway">Lagos Subway</option>
+                      <option value="Abuja Subway">Abuja Subway</option>
+                      <option value="Kano Railway">Kano Railway</option>
+                      <option value="Benin Station">Benin Subway</option>
+                      <option value="Delta Way">Delta Station</option>
+                      <option value="Nmadi Azikiwe Subway">Nmadi Azikiwe Subway</option>
+                      <option value="Ivan Subway">Ivan Subway</option>
+                    </select>
+                    <label for="stateofdeparture">Subway Station</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select" aria-label="Default select example" id="destination">
+                          <option value="FCT">FCT Abuja</option>
+                          <option value="Lagos">Lagos</option>
+                          <option value="Kano">Kano</option>
+                          <option value="Benin">Benin</option>
+                          <option value="Delta">Delta</option>
+                          <option value="Akwa Ibom">Akwa Ibom</option>
+                          <option value="Port Harcourt">Port Harcourt</option>
+                          <option value="Ibadan">Ibadan</option>
+                          <option value="Nassarawa">Nassarawa</option>
+                        </select>
+
+                        <label for="destination">Destination</label>
+                        </div>
+                
+                      <div class="form-floating mb-3">
+                        <select class="form-select" aria-label="Default select example" id="trainoperator">
+                            <option value="Avanti West Coast">Avanti West Coast</option>
+                            <option value="Chiltern Railways">Chiltern Railways</option>
+                            <option value="Abuja metro Train station">Abuja metro Train station</option>
+                            <option value="East Midlands Railway">East Midlands Railway</option>
+                            <option value="Eurostar">Eurostar</option>
+                            <option value="Stadium light rail station">Stadium light rail station</option>
+                            <option value="Great Northern">Great Northern</option>
+                            <option value="Idu Express">Idu Express</option>
+                            <option value="Heathrow Express">Heathrow Express</option>
+                            <option value="Island Line">Island Line</option>
+                            <option value="TransPennine Express">TransPennine Express</option>
+                            
+                          </select>
+                          <label for="destination">Train Operator</label>
+                          </div>
+                
               </form>
 
             </div>
 
             <!--To display return ticket form-->
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-              <form class="row oneway">
-                <div class="col-sm-2">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
-                  <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon2">
+              
+              <form>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+                  <label for="floatingInput">First Name</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
+                  <label for="floatingInput">Last Name</label>
                 </div>
-        
-                <div class="col-sm-2">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope icon"></i></span>
-                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number">
+                  <label for="floatingInput">Phone Number</label>
                 </div>
-        
-                <div class="col-sm-2"> 
-                  <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone icon"></i></span>
-                  <input type="tel" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon2">
+
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="Number of Passengers">
+                  <label for="floatingInput">Number of Passengers</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="date" class="form-control" id="floatingInput" placeholder="Departure date">
+                  <label for="floatingInput">Date of Departure</label>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <input type="date" class="form-control" id="floatingInput" placeholder="Return date">
+                  <label for="floatingInput">Return Date</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-select" aria-label="Default select example" id="identification">
+                      <option value="Lagos Subway">International Passport</option>
+                      <option value="Abuja Subway">Driver's License</option>
+                      <option value="Kano Railway">NIN</option>
+                    </select>
+                    <label for="stateofdeparture">Means of Identification</label>
+                    </div>
                
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-chair"></i></span>
-                    <input type="number" class="form-control" placeholder="Passengers" aria-label="Number of Passengers" aria-describedby="basic-addon2">
-                  </div>
-                </div>
-        
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar "></i></span>
-                    <input type="date" class="form-control" placeholder="Departure Date" aria-label="Departure Date" aria-describedby="basic-addon2">
-                  </div>
-                </div>
-        
-                <div class="col-sm-2">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                    <input type="number" class="form-control" placeholder="Return Date" aria-label="Return Date" aria-describedby="basic-addon2">
-                  </div>
-                </div>
-        
+                <div class="form-floating mb-3">
+                  <select class="form-select" aria-label="Default select example" id="subwaystation">
+                      <option value="Lagos Subway">Lagos Subway</option>
+                      <option value="Abuja Subway">Abuja Subway</option>
+                      <option value="Kano Railway">Kano Railway</option>
+                      <option value="Benin Station">Benin Subway</option>
+                      <option value="Delta Way">Delta Station</option>
+                      <option value="Nmadi Azikiwe Subway">Nmadi Azikiwe Subway</option>
+                      <option value="Ivan Subway">Ivan Subway</option>
+                    </select>
+                    <label for="stateofdeparture">Subway Station</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select" aria-label="Default select example" id="destination">
+                          <option value="FCT">FCT Abuja</option>
+                          <option value="Lagos">Lagos</option>
+                          <option value="Kano">Kano</option>
+                          <option value="Benin">Benin</option>
+                          <option value="Delta">Delta</option>
+                          <option value="Akwa Ibom">Akwa Ibom</option>
+                          <option value="Port Harcourt">Port Harcourt</option>
+                          <option value="Ibadan">Ibadan</option>
+                          <option value="Nassarawa">Nassarawa</option>
+                        </select>
+
+                        <label for="destination">Destination</label>
+                        </div>
+                
+                      <div class="form-floating mb-3">
+                        <select class="form-select" aria-label="Default select example" id="trainoperator">
+                            <option value="Avanti West Coast">Avanti West Coast</option>
+                            <option value="Chiltern Railways">Chiltern Railways</option>
+                            <option value="Abuja metro Train station">Abuja metro Train station</option>
+                            <option value="East Midlands Railway">East Midlands Railway</option>
+                            <option value="Eurostar">Eurostar</option>
+                            <option value="Stadium light rail station">Stadium light rail station</option>
+                            <option value="Great Northern">Great Northern</option>
+                            <option value="Idu Express">Idu Express</option>
+                            <option value="Heathrow Express">Heathrow Express</option>
+                            <option value="Island Line">Island Line</option>
+                            <option value="TransPennine Express">TransPennine Express</option>
+                            
+                          </select>
+                          <label for="destination">Train Operator</label>
+                          </div>
+                
               </form>
+
+
             </div>
           </div>
           <!--to display form horizontally use a grid system-->
