@@ -27,6 +27,8 @@
 
     <!-- Template Stylesheet -->
     <link href="Assets/css/index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </head>
 <body>
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -34,6 +36,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   
 
+  <!--Spinner-->
+  <div id="overlay">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <!-- <br/>
+    Loading... -->
+  </div>
+  
+  <div class="content">
     <!--For navbar-->
       <nav class="navbar navbar-expand-lg navbar-light sticky-top header">
 
@@ -47,14 +59,35 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="nav nav-pills mainmenu" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active menu" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Book Ticket</button>
+                <button class="nav-link active menu" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><a href="#ticketform">Book Ticket</a></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link menu" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">View Ticket Record</button>
+                <button class="nav-link menu" id="pills-profile-tab" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">View Ticket Status</button>
               </li>
             </ul>
           </div>
       </nav>
+
+      <!--modal page to view train ticket status-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">View Ticket Status</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope icon"></i></span>
+                <input type="text" class="form-control" placeholder="Input Ticket ID" aria-label="Ticket ID" aria-describedby="basic-addon2" id="trackid">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary recoverylink" id="viewstatus">View Status</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!--For Content-->
     <div class="container-fluid overflow-hidden px-0">
@@ -73,7 +106,7 @@
     </div>
 
     <!--Section to book ticket-->
-    <div class="row ticketform">
+    <div class="row ticketform" id="ticketform">
 
       <!--card for holding form-->
       <div class="card text-center">
@@ -97,42 +130,47 @@
               
               <form>
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
-                  <label for="floatingInput">First Name</label>
+                  <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                  <label for="firstname">First Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
-                  <label for="floatingInput">Last Name</label>
+                  <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                  <label for="lastname">Last Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  <label for="email">Email address</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number">
-                  <label for="floatingInput">Phone Number</label>
+                  <input type="tel" class="form-control" id="phonenumber" placeholder="Phone Number">
+                  <label for="phonenumber">Phone Number</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="floatingInput" placeholder="Number of Passengers">
-                  <label for="floatingInput">Number of Passengers</label>
+                  <input type="number" class="form-control" id="passengers" placeholder="passengers">
+                  <label for="passengers">Number of Passengers</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="date" class="form-control" id="floatingInput" placeholder="Departure date">
-                  <label for="floatingInput">Date of Departure</label>
+                  <input type="date" class="form-control" id="departuredate" placeholder="Departure date">
+                  <label for="departuredate">Date of Departure</label>
                 </div>
 
                 <div class="form-floating mb-3">
                   <select class="form-select" aria-label="Default select example" id="identification">
-                      <option value="Lagos Subway">International Passport</option>
-                      <option value="Abuja Subway">Driver's License</option>
-                      <option value="Kano Railway">NIN</option>
+                      <option value="International Passport">International Passport</option>
+                      <option value="Driver's License">Driver's License</option>
+                      <option value="NIN">NIN</option>
                     </select>
-                    <label for="stateofdeparture">Means of Identification</label>
+                    <label for="identification">Type of ID</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="idnumber" placeholder="ID Number">
+                      <label for="idnumber">Identification Number</label>
                     </div>
                
                 <div class="form-floating mb-3">
@@ -145,7 +183,7 @@
                       <option value="Nmadi Azikiwe Subway">Nmadi Azikiwe Subway</option>
                       <option value="Ivan Subway">Ivan Subway</option>
                     </select>
-                    <label for="stateofdeparture">Subway Station</label>
+                    <label for="subwaystation">Subway Station</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -179,7 +217,7 @@
                             <option value="TransPennine Express">TransPennine Express</option>
                             
                           </select>
-                          <label for="destination">Train Operator</label>
+                          <label for="trainoperator">Train Operator</label>
                           </div>
                 
               </form>
@@ -191,47 +229,52 @@
               
               <form>
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
-                  <label for="floatingInput">First Name</label>
+                  <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                  <label for="firstname">First Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
-                  <label for="floatingInput">Last Name</label>
+                  <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                  <label for="lastname">Last Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  <label for="email">Email address</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number">
-                  <label for="floatingInput">Phone Number</label>
+                  <input type="tel" class="form-control" id="phonenumber" placeholder="Phone Number">
+                  <label for="phonenumber">Phone Number</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="floatingInput" placeholder="Number of Passengers">
-                  <label for="floatingInput">Number of Passengers</label>
+                  <input type="number" class="form-control" id="passengers" placeholder="Number of Passengers">
+                  <label for="passengers">Number of Passengers</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="date" class="form-control" id="floatingInput" placeholder="Departure date">
-                  <label for="floatingInput">Date of Departure</label>
+                  <input type="date" class="form-control" id="departuredate" placeholder="Departure date">
+                  <label for="departuredate">Date of Departure</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="date" class="form-control" id="floatingInput" placeholder="Return date">
-                  <label for="floatingInput">Return Date</label>
+                  <input type="date" class="form-control" id="returndate" placeholder="Return date">
+                  <label for="returndate">Return Date</label>
                 </div>
 
                 <div class="form-floating mb-3">
                   <select class="form-select" aria-label="Default select example" id="identification">
-                      <option value="Lagos Subway">International Passport</option>
-                      <option value="Abuja Subway">Driver's License</option>
-                      <option value="Kano Railway">NIN</option>
+                      <option value="International Passport">International Passport</option>
+                      <option value="Driver's License">Driver's License</option>
+                      <option value="NIN">NIN</option>
                     </select>
-                    <label for="stateofdeparture">Means of Identification</label>
+                    <label for="identification">ID</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="idnumber" placeholder="ID Number">
+                      <label for="idnumber">Identification Number</label>
                     </div>
                
                 <div class="form-floating mb-3">
@@ -244,7 +287,7 @@
                       <option value="Nmadi Azikiwe Subway">Nmadi Azikiwe Subway</option>
                       <option value="Ivan Subway">Ivan Subway</option>
                     </select>
-                    <label for="stateofdeparture">Subway Station</label>
+                    <label for="subwaystation">Subway Station</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -278,7 +321,7 @@
                             <option value="TransPennine Express">TransPennine Express</option>
                             
                           </select>
-                          <label for="destination">Train Operator</label>
+                          <label for="trainoperator">Train Operator</label>
                           </div>
                 
               </form>
@@ -292,7 +335,7 @@
         </div>
         <!--Button for submitting form-->
         <div class="row">
-          <a href="#" class="btn btn-primary">Book Ticket</a>
+          <a href="#" class="btn btn-primary" id="bookticket">Book Ticket</a>
         </div>
       </div>
     </div>
@@ -300,8 +343,8 @@
 
     <!--For Footer-->
     <div class="row footer"></div>
-   
-    <script src="jsfile.js"></script>
+  </div>
+    <script src="Assets/js/jsfile.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,28 @@
 
+/*For Spinner*/
+#overlay {
+    background: #ffffff;
+    color: #666666;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    /* opacity: .80; */
+  }
+  
 body
 {
     width: 100%;
+  
 }
+
 .container
-{
+{     
       width: 100%;
       height: auto;
 }
@@ -25,14 +43,16 @@ body
 }
 
 /*Changing button font color on the nav bar*/
-.menu
+.menu, .nav-link:focus
 {
     color: white;
 }
+
 .menu:hover
 {
     color: #40415c;
 }
+
 
 /*changing color of nav bar*/
 .header
@@ -162,9 +182,21 @@ h4, p, h6
 {
     border-bottom-style: none;
 }
-.bookingtabs, .bookingtabs:focus
+.bookingtabs, .bookingtabs:focus, .tabbuttons, .tabbuttons:hover
 {
     color: #40415c;
+}
+
+/*for the icons box*/
+.input-group-text
+{
+    background-color: white;
+    border-left-style: hidden;
+    border-right-style:hidden ;
+    border-top-style: hidden;
+    border-radius: 0%;
+    border-bottom-style: groove;
+    border-color: #40415c;
 }
 
 .bookingoptions
@@ -251,4 +283,9 @@ h5
     flex-wrap:nowrap;
 }
 
+/*givng margin btw the select boxes*/
+.form-select
+{
+    margin-top: 18%
+}
 }
