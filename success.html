@@ -27,6 +27,7 @@
 
     <!-- Template Stylesheet -->
     <link href="Assets/css/index.css" rel="stylesheet">
+    <link href="Assets/css/success.css" rel="stylesheet">
 </head>
 <body>
   <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -50,7 +51,7 @@
                 <button class="nav-link active menu" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><a href="index.html">Book Ticket</a></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link menu" id="pills-profile-tab" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">View Ticket Record</button>
+                <button class="nav-link menu" id="pills-profile-tab" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">View Ticket Status</button>
               </li>
             </ul>
           </div>
@@ -80,30 +81,43 @@
           </div>
         </div>
       </div>
-    <div class="row">
-      
-      <!--Display Ticket-->
-      <div class="card">
-        <div class="card-body">
-          <h4>kslksls</h4>
-         
-          <div class="row">
-            <div class="col-sm-3">TicketID</div>
-            <div class="col-sm-3">Passenger Name</div>
-            <div class="col-sm-3">Class</div>
-            <div class="col-sm-3">Boarding Time</div>
-          </div>
 
-          <div class="row">
-            <div class="col-sm-3">Boarding Date</div>
-            <div class="col-sm-3">Boarding Gate</div>
-            <div class="col-sm-3">Departure</div>
-            <div class="col-sm-3">Destination</div>
-
-          </div>
-
+      <div class="row ticketgeneration">
+        <div class="col-sm-12 ticketgeneration">
+        <a href="#" class="btn btn-primary clickbtn" id="generateticket">Generate Ticket</a>
         </div>
       </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          
+          <div class="card-header">
+            <b>ITTRS TRAIN TICKET</b>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3"><p ><b>Ticket ID:</b></p><p id="ticketid"></p></div>
+              <div class="col-sm-3"><p><b>Passenger Name:</b></p><p id="name"></p></div>
+              <div class="col-sm-3"><p ><b>Class:</b></p><p id="class"></p></div>
+              <div class="col-sm-3"><p><b>Boarding Time:</b></p><p id="boardingtime"></p></div>
+            </div>
+  
+            <div class="row">
+              <div class="col-sm-3"><p ><b>Boarding Date:</b></p><p id="boardingdate"></p></div>
+              <div class="col-sm-3"><p><b>Boarding Gate:</p></b><p></p></div>
+              <div class="col-sm-3"><p ><b>Departure:</b></p><p id="departure"></p></div>
+              <div class="col-sm-3"><p ><b>Destination:</b></p><p id="destination"></p></div>
+  
+            </div>
+  
+          </div>
+          
+        </div>
+        
+      </div>
+      <!--Display Ticket-->
+     
     </div>
 
     </div>
@@ -111,7 +125,7 @@
     <!--For Footer-->
     <div class="row footer"></div>
    
-    <script src="jsfile.js"></script>
+    <script src="Assets/js/success.js"></script>
 </body>
 
 </html>

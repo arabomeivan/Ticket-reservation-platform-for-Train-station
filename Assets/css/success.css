@@ -1,0 +1,38 @@
+/*aliging card to center of the screen*/
+.card
+{
+    margin-top: 4%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*alligining heading to center of screen*/
+h4
+{
+    text-align: center;
+}
+
+/*alligning button to center*/
+.ticketgeneration
+{
+    width: auto;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.clickbtn
+{
+    width:30rem;
+}
+
+@media screen and (max-width: 567px) 
+{
+    .clickbtn
+    {
+        width: 80%;
+    }
+    
+}

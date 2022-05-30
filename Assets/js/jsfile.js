@@ -93,7 +93,7 @@ bookticket.addEventListener('click', (e) => {
         if (clientdetails != null) 
         {
             /**converts the local storage back into readeable data */
-            let getdetails = JSON.parse(localStorage.getItem('Issued Tickets'))
+            let getdetails = JSON.parse(localStorage.getItem('Train Tickets'))
             if (getdetails == null) 
             {
                 getdetails = [];
@@ -169,6 +169,7 @@ bookticket.addEventListener('click', (e) => {
 
     e.preventDefault()
 
+    
     
 });
 
